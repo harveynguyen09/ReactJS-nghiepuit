@@ -7,6 +7,9 @@ class App extends Component {
   onClick(){
     console.log('đây là app-component');
   }
+  addProduct=()=>{
+    console.log(this.refs.name.value)
+  }
   render() {
     let product = [
       {
@@ -59,7 +62,11 @@ class App extends Component {
         <div className="container">
 
           <div className="row">
-
+            <div className="form-group">
+              <label>Tên sản phẩm</label>
+              <input type='text' className="form-control" ref="name"></input>
+            </div>
+            <button className="btn btn-dangern" onClick={this.addProduct}>Lưu</button>
             <div className="col-xs- col-sm- col-md- col-lg-">
               {element}
             </div>
