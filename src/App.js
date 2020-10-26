@@ -4,6 +4,9 @@ import './App.css';
 import Productapp from './components/product-app'
 
 class App extends Component {
+  onClick(){
+    console.log('đây là app-component');
+  }
   render() {
     let product = [
       {
@@ -60,6 +63,13 @@ class App extends Component {
             <div className="col-xs- col-sm- col-md- col-lg-">
               {element}
             </div>
+            
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              
+              <button type="button" className="btn btn-default" onClick={this.onClick}>Click me</button>
+              
+            </div>
+            
 
           </div>
 

@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 
 class Productapp extends Component {
+    constructor(){
+        super()
+        this.onAddtoCart1 = this.onAddtoCart1.bind(this);
+    }
+    onAddtoCart(text){
+        alert(text)
+    }
+    onAddtoCart1(){
+        alert(this.props.name+'-'+this.props.price)
+    }
+    onAddtoCart2= ()=>{
+        alert(this.props.name+'-'+this.props.price)
+    }
   render() {
     return (
         
@@ -17,7 +30,9 @@ class Productapp extends Component {
                                 {this.props.price}
                             </p>
                             <p>
-                                <a className="btn btn-primary">Mua ngay</a>
+                                <a className="btn btn-primary" onClick={()=>{this.onAddtoCart(this.props.name)}}>Mua ngay</a>
+                                <a className="btn btn-primary" onClick={this.onAddtoCart1}>Mua ngay 1</a>
+                                <a className="btn btn-primary" onClick={this.onAddtoCart2}>Mua ngay 2</a>
                             </p>
                         </div>
                 </div>   
